@@ -208,10 +208,4 @@ The predicted distribution is slightly shifted right vs. training (median $20.69
 
 ---
 
-## What I'd improve next
 
-- **Stronger text encoder:** Replace `bert-base-uncased` with `deberta-v3-base` or `all-mpnet-base-v2` — better product domain transfer
-- **Test-time augmentation (TTA):** Apply 3-pass augmented inference on test images and average, same as train augmentation
-- **Stacking meta-learner:** Train a LightGBM on 5 OOF fold predictions as meta-features
-- **Category-aware features:** If category labels are available, one-hot encode and late-fuse with NER scalars
-- **Higher LoRA rank:** r=64 to increase BERT adaptation capacity without full fine-tuning cost
